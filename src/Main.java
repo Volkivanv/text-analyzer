@@ -1,12 +1,16 @@
-import impl.Repository;
+import core.Repository;
+import core.View;
+import core.util.FindLongest;
+import core.util.FreqDicitonary;
+import core.util.WordCounter;
+
+import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
-        Repository repository = new Repository("input.txt");
-        try{
-        System.out.println(repository.getWords().toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        View view = new View("input.txt");
+        view.run();
+
     }
 }

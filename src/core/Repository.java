@@ -1,4 +1,4 @@
-package impl;
+package core;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -33,6 +33,7 @@ public class Repository {
         String text = readFile();
         text = text.trim();
         Collection<String> words = new ArrayList<>(Arrays.asList(text.split(" ")));
+        words.removeIf(String::isEmpty);
         return words;
     }
 }
